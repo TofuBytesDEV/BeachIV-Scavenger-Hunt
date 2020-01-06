@@ -9,3 +9,7 @@ main{
 .card-body {
     margin-bottom: 20px
 }
+
+h1 {
+    font-family: 'Kadwa', serif;
+}
