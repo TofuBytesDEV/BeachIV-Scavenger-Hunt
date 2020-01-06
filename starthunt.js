@@ -1,10 +1,25 @@
-$ npm install p-wait-for
+var starthunt = false
+$.ajax({
+  url: 'https://raw.githubusercontent.com/TofuBytesRBX/BeachIV-Scavenger-Hunt/master/start.txt',
+  dataType: 'json',
+  success: function(data){
+    console.log( data );
+      starthunt = data;
+  }
+});
 
-const pWaitFor = require('p-wait-for');
-const pathExists = require('path-exists');
+do {
+    $.ajax({
+  url: 'https://raw.githubusercontent.com/TofuBytesRBX/BeachIV-Scavenger-Hunt/master/start.txt',
+  dataType: 'jsonp',
+  success: function(data){
+    console.log( data );
+      starthunt = data;
+  }
+});
+    if (starthunt == true);
+    
+    break;
+}
 
-(async () => {
-	await pWaitFor(() => pathExists('/go.txt'));
-	console.log('Yay! The file now exists.');
-    window.location.replace("https://tofubytesrbx.github.io/BeachIV-Scavenger-Hunt/start.html");
-})();
+while (starthunt == false);
