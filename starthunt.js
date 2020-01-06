@@ -1,26 +1,19 @@
 var starthunt = false
-$.ajax({
-  url: 'https://raw.githubusercontent.com/TofuBytesRBX/BeachIV-Scavenger-Hunt/master/start.txt',
-  dataType: 'json',
-  success: function(data){
-    console.log( data );
-      starthunt = data;
-  }
-});
+
+
 
 do {
-    setInterval(1000)
     $.ajax({
-  url: 'https://raw.githubusercontent.com/TofuBytesRBX/BeachIV-Scavenger-Hunt/master/start.txt',
-  dataType: 'jsonp',
+  url: '/start.txt',
+  dataType: 'text',
   success: function(data){
     console.log( data );
       starthunt = data;
   }
 });
-    if (starthunt == true);
-    
+    if (starthunt == "true");
+        window.location.replace("https://tofubytesrbx.github.io/BeachIV-Scavenger-Hunt/start.html");
     break;
 }
 
-while (starthunt == false);
+while (starthunt == "false");
