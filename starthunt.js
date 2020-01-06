@@ -3,7 +3,7 @@ var starthunt = false
 do {
     $.ajax({
   url: 'https://raw.githubusercontent.com/TofuBytesRBX/BeachIV-Scavenger-Hunt/master/start.txt',
-  dataType: 'json',
+  dataType: 'jsonp',
   success: function(data){
     console.log( data );
       starthunt = data;
