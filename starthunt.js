@@ -9,6 +9,7 @@ $.ajax({
 });
 
 do {
+    setInterval(1000)
     $.ajax({
   url: 'https://raw.githubusercontent.com/TofuBytesRBX/BeachIV-Scavenger-Hunt/master/start.txt',
   dataType: 'jsonp',
